@@ -14,5 +14,7 @@ my_cur = my_cnx.cursor()
 my_cur.execute("select color_or_style from catalog_for_website")
 my_catalog = my_cur.fetchall()
 
-st.write(my_catalog)
-st.write(type(my_catalog))
+df = pandas.DataFrame(my_catalog)
+
+st.write(df)
+
