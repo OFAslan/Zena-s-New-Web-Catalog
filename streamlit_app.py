@@ -20,5 +20,5 @@ pd_df = pd.DataFrame(my_catalog)
 
 color_list = pd_df[0].values.tolist()
 
-st.write(color_list)
+print(color_list)
 
