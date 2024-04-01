@@ -26,7 +26,7 @@ color_option = st.selectbox('Pick a sweatsuit color or style:', list(color_list)
 
 # We'll build the image caption now, since we can
 
-product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
+product_caption = 'Our warm, comfortable, ' + color_option + ' sweatsuit!'
 
 st.write(product_caption)
 
