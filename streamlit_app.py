@@ -33,7 +33,5 @@ product_caption = 'Our warm, comfortable, ' + color_option + ' sweatsuit!'
 my_cur.execute("""select direct_url, price, size_list, upsell_product_desc from catalog_for_website where
 color_or_style = '" + color_option + "';""")
 df2 = my_cur.fetchone()
-st.image(df[0], caption=product_caption, use_column_width=True)
-st.write('Price: ', df2[1])
-st.write('Sizes Available: ',df2[2])
-st.write(df2[3])
+
+st.write(df2)
