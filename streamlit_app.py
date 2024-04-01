@@ -16,5 +16,9 @@ my_catalog = my_cur.fetchall()
 
 pd_df = pd.DataFrame(my_catalog)
 
-st.write(pd_df)
+#st.write(pd_df)
+
+color_list = pd_df[0].values.tolist()
+
+st.write(color_list)
 
