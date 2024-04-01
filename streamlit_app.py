@@ -9,6 +9,9 @@ st.title('👕 Zena\'s SweatSuit Catalog 👖')
 
 cnx = st.connection("snowflake")
 session = cnx.session()
-my_dataframe = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.CATALOG_FOR_WEBSITE").select(col('COLOR_OR_STYLE'))
-st.dataframe(data=my_dataframe, use_container_width=True)
-st.stop()
+my_dataframe = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.CATALOG_FOR_WEBSITE")
+
+pd_df = my_dataframe.to_pandas()
+
+st.write(pd_df.iloc[1])
+
