@@ -34,7 +34,7 @@ my_cur.execute("""select direct_url, price, size_list, upsell_product_desc from 
 color_or_style = '" + color_option + "';""")
 df2 = my_cur.fetchone()
 st.image(
-df2[0],
+df2.iloc[0, 0],
 width=400,
 caption= product_caption
 )
