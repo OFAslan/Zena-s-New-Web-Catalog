@@ -22,11 +22,14 @@ color_list = pd_df[0].values.tolist()
 
 # Let's put a pick list here so the user can pick the color
 
-color_option = streamlit.selectbox('Pick a sweatsuit color or style:', list(color_list))
+color_option = st.selectbox('Pick a sweatsuit color or style:', list(color_list))
 
 # We'll build the image caption now, since we can
 
 product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
+
+st.write(product_caption)
+st.stop()
 
 # use the option selected to go back and get all the info from the database
 
