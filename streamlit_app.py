@@ -13,5 +13,7 @@ my_dataframe = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.CATALOG_FOR_WEBSITE")
 
 pd_df = my_dataframe.to_pandas()
 
-st.write(pd_df.loc[pd_df['COLOR_OR_STYLE'] == 'RED', 'DIRECT_URL'].iloc[0])
+color_option = st.selectbox('Pick a sweatsuit color or style:', list(pd_df.loc[:, 'COLOR_OR_STYLE']))
+
+
 
